@@ -11,10 +11,19 @@ namespace BrusAutomat
             //Man trykker på en knapp for en bestemt drikk
             //-hvis man har puttet på nok får man denne og saldoen reduseres tilsvarende.
             //Det finnes en knapp for å få gjeldende saldo tilbake.
+
+
             SodaMachine sodaMachine = new SodaMachine();
-            sodaMachine.InsertMoney(30);
-            var chosenType = Soda.Types.Water;
-            sodaMachine.ChoseSoda(new Soda(chosenType));
+            sodaMachine.InsertMoney(200);
+            var chosenType1 = Soda.Types.Pepsi;
+            sodaMachine.ChoseSoda(new Soda(chosenType1));
+
+            var chosenType2 = Soda.Types.CocaCola;
+            sodaMachine.ChoseSoda(new Soda(chosenType2));
+
+            var chosenType3 = Soda.Types.Water;
+            sodaMachine.ChoseSoda(new Soda(chosenType3));
+
             sodaMachine.ReturnMoney();
         }
     }

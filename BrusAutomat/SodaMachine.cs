@@ -14,17 +14,15 @@ namespace BrusAutomat
         }
         public void ChoseSoda(Soda soda)
         {
-            if (soda.Storage == 0)
-            {
-                Console.WriteLine("The machine is out of that drink. Pick another one or leave thirsty");
-            }
+            if (soda.Storage == 0) Console.WriteLine($"The machine is out {soda.Type}. Pick another one or leave thirsty");
+            
             else if (Coins >= soda.Price)
             {
                 Coins -= soda.Price;
                 soda.Storage--;
-                Console.WriteLine($"A {soda.Type} was violently dropped into the tray at the bottom\nThe machine has {soda.Storage} drinks of that type left");
+                Console.WriteLine($"A {soda.Type} was violently dropped into the tray at the bottom\nThe machine has {soda.Storage} {soda.Type}s left");
             }
-            else Console.WriteLine($"you need {soda.Price - Coins} more for that drink");
+            else Console.WriteLine($"you need {soda.Price - Coins} more a {soda.Type}");
         }
 
         public void ReturnMoney()
