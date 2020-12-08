@@ -7,6 +7,9 @@ namespace BrusAutomat
     class SodaMachine
     {
         private int Coins;
+        private int Id;
+        //SodaMachine har et array av Tilgjengelig brus? 
+        //Hver individuelle brus skal ikke ha en storage? 
 
         public void InsertMoney(int coins)
         {
@@ -22,7 +25,7 @@ namespace BrusAutomat
                 soda.Storage--;
                 Console.WriteLine($"A {soda.Type} was violently dropped into the tray at the bottom\nThe machine has {soda.Storage} {soda.Type}s left");
             }
-            else Console.WriteLine($"you need {soda.Price - Coins} more a {soda.Type}");
+            else Console.WriteLine($"you need {soda.Price - Coins} more for a {soda.Type}");
         }
 
         public void ReturnMoney()

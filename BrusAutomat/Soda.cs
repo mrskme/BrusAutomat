@@ -14,6 +14,16 @@ namespace BrusAutomat
         public Soda(Types type)
         {
             Type = type;
+            setValues();
+        }
+
+        //public Soda()
+        //{
+
+        //}
+
+        public void setValues()
+        {
             if (Type == Types.CocaCola)
             {
                 Price = 30;
@@ -31,8 +41,8 @@ namespace BrusAutomat
             }
             if (Type == Types.Pepsi)
             {
-                Price = 69;
-                Storage = 1;
+                Price = 45;
+                Storage = 2;
             }
             if (Type == Types.Water)
             {
@@ -40,5 +50,6 @@ namespace BrusAutomat
                 Storage = Int32.MaxValue;
             }
         }
+
     }
 }
