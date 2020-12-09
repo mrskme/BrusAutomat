@@ -21,12 +21,12 @@ namespace BrusAutomat
                 new DrinksType(80, "Urge", 1),
             };
         }
-
         public void ChoseDrink(string type)
         {
             var chosenType = Drinks.FirstOrDefault(D => D.Name == type);
             if (chosenType != null) GiveDrinkToHuman(chosenType);
-            else Console.WriteLine($"{type} is not a valid drink");
+            else Console.WriteLine($"{type} is not a valid drink\n");
+            //metode som returnerer drinks type
         }
 
         public void GiveDrinkToHuman(DrinksType chosenType)

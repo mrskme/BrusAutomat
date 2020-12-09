@@ -15,6 +15,7 @@ namespace BrusAutomat
         //Det finnes en knapp for å få gjeldende saldo tilbake.
 
             drinksMachine.InsertMoney(200);
+            drinksMachine.ChoseDrink("c");
             drinksMachine.ChoseDrink("Coca Cola");
             drinksMachine.ChoseDrink("Coca Cola");
             drinksMachine.ChoseDrink("Coca Cola");
@@ -23,6 +24,19 @@ namespace BrusAutomat
             drinksMachine.ChoseDrink("Coca Cola");
             drinksMachine.ChoseDrink("Urge");
             drinksMachine.ReturnMoney();
+            var line = Console.ReadLine();
+            Program program = new Program();
+            program.HandleCommand(line);
+
+        }
+
+        private void HandleCommand(string command)
+        {
+            DrinksMachine drinksMachine = new DrinksMachine();
+            //200 Coca Cola return
+            var split =command.Split(" ");
+            drinksMachine.InsertMoney(Convert.ToInt32(split[0]));
+            drinksMachine.ChoseDrink(command);
         }
     }
 }
